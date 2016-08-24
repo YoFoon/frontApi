@@ -1,0 +1,45 @@
+.ant-breadcrumb{
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+	.add-api{
+		display: inline-block;
+		border: 1px solid #d8d8d8;
+		height: 25px;
+		width: 25px;
+		line-height: 25px;
+		text-align: center;
+		border-radius: 50%;
+		transition: all 0.2s;
+        cursor: pointer;
+        background: #d8d8d8;
+        position: relative;
+        .add-api-btn{
+            position: absolute;
+            width: 70px;
+            top: 29px;
+            left: -22px;
+            font-size: 12px;
+            display: none;
+            background-color: #666;
+            color: #f1f1f1;
+            border-radius: 15px;
+        }
+        &:hover{
+			transform: scale(1.2,1.2);
+            color: #666;
+            .add-api-btn{
+                display: inline-block;
+            }
+		}
+	}
+}
+.ant-select-selection{
+    border: 2px solid #ddd !important;
+    box-shadow: none !important;
+    border-radius: 15px !important;
+}
+.ant-select-selection:hover {
+    border: 2px solid #ddd !important;
+    box-shadow: none !important;
+}

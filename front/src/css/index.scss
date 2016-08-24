@@ -1,0 +1,16 @@
+//引入antd ui
+@import './component/antd.min.css';
+//引入基础库类
+@import './component/base';
+//引入头部
+@import './component/header';
+//引入api列表
+@import './component/api-list';
+//引入新建api样式
+@import './component/new-api';
+//引入api详情样式
+@import './component/apis';
+//引入Schema样式
+@import './component/resources';
+//一些修改的antd ui样式
+@import './component/antd-cover';

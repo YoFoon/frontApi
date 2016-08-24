@@ -1,0 +1,278 @@
+@import url(./component/antd.min.css);
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, select, input {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 12px; }
+
+img {
+  border: none;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse; }
+
+ul, ol {
+  list-style: none; }
+
+textarea {
+  resize: none;
+  overflow: auto; }
+
+a {
+  text-decoration: none; }
+
+html {
+  font-size: 100px; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix {
+  zoom: 1; }
+  .clearfix:after {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    content: ""; }
+
+.absoLayout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: auto; }
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("../icon/iconfont.eot");
+  /* IE9*/
+  src: url("../icon/iconfont.eot?#iefix") format("embedded-opentype"), url("../icon/iconfont.woff") format("woff"), url("../icon/iconfont.ttf") format("truetype"), url("../icon/iconfont.svg#iconfont") format("svg");
+  /* iOS 4.1- */ }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.header {
+  height: 50px;
+  padding: 0 0.2rem;
+  font-size: 24px;
+  background-color: #f3f3f3;
+  color: #666;
+  line-height: 50px; }
+
+.login {
+  margin-right: 0.1rem;
+  cursor: pointer; }
+
+.api-list {
+  margin-top: 20px; }
+  .api-list .each-list {
+    height: 55px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    padding: 0 10px;
+    padding-top: 5px;
+    margin-left: 4px;
+    transition: transform 0.1s;
+    cursor: pointer; }
+    .api-list .each-list:hover {
+      border-color: #d8d8d8;
+      transform: translateX(-4px); }
+      .api-list .each-list:hover .api-enter {
+        display: block; }
+  .api-list .tag {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: burlywood;
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 15px; }
+  .api-list .api-name {
+    -webkit-transition: margin 0.1s ease-in;
+    transition: margin 0.1s ease-in;
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #000; }
+  .api-list .create-time {
+    font-size: 12px;
+    color: #999;
+    font-weight: 700; }
+  .api-list .api-enter {
+    line-height: 40px;
+    display: none;
+    color: #d8d8d8;
+    font-size: 26px;
+    font-weight: bold; }
+
+.title {
+  margin-top: 20px; }
+
+.new-api-form {
+  border-bottom: 1px solid #bdbdbd;
+  padding-bottom: 10px; }
+  .new-api-form .content {
+    margin-left: 10px; }
+    .new-api-form .content h3 {
+      font-size: 16px;
+      margin: 20px 0 10px 0; }
+    .new-api-form .content p {
+      font-size: 12px;
+      margin: 3px 0; }
+    .new-api-form .content input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      -webkit-transition: border-color 0.1s ease-in;
+      transition: border-color 0.1s ease-in;
+      margin: 5px 0 5px 10px;
+      width: 200px;
+      padding: 5px 10px;
+      background: none;
+      box-shadow: none;
+      border-radius: 15px;
+      border: 2px solid #ddd;
+      outline: none; }
+      .new-api-form .content input:focus {
+        box-shadow: none;
+        border-color: #999; }
+
+.go-forword {
+  margin-top: 10px;
+  font-size: 24px;
+  height: 40px;
+  width: 40px;
+  background-color: #33dd33;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #FFF; }
+
+.apis-tool i {
+  display: inline-block;
+  border: 1px solid #d8d8d8;
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+  cursor: pointer;
+  background: #d8d8d8;
+  position: relative;
+  margin: 0 3px;
+  transition: all 0.2s;
+  color: #666; }
+  .apis-tool i:hover {
+    transform: scale(1.2); }
+
+.schema h2 {
+  margin-top: 20px; }
+
+.schema .content {
+  margin-left: 10px; }
+  .schema .content h3 {
+    font-size: 16px;
+    margin: 20px 0 10px 0; }
+  .schema .content p {
+    font-size: 12px;
+    margin: 3px 0; }
+  .schema .content input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: border-color 0.1s ease-in;
+    transition: border-color 0.1s ease-in;
+    margin: 5px 0 5px 10px;
+    width: 200px;
+    padding: 5px 10px;
+    background: none;
+    box-shadow: none;
+    border-radius: 15px;
+    border: 2px solid #ddd;
+    outline: none; }
+  .schema .content button {
+    display: inline-block;
+    border: 1px solid #d8d8d8;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+    cursor: pointer;
+    background: #d8d8d8;
+    position: relative;
+    opacity: 0;
+    outline: none;
+    margin-left: 10px; }
+    .schema .content button span {
+      position: absolute;
+      width: 106px;
+      top: 29px;
+      left: 0;
+      font-size: 12px;
+      /* display: none; */
+      background-color: #666;
+      color: #f1f1f1;
+      border-radius: 15px; }
+  .schema .content .schema-input:hover button {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+    color: #666; }
+
+.ant-breadcrumb {
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px; }
+  .ant-breadcrumb .add-api {
+    display: inline-block;
+    border: 1px solid #d8d8d8;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+    cursor: pointer;
+    background: #d8d8d8;
+    position: relative; }
+    .ant-breadcrumb .add-api .add-api-btn {
+      position: absolute;
+      width: 70px;
+      top: 29px;
+      left: -22px;
+      font-size: 12px;
+      display: none;
+      background-color: #666;
+      color: #f1f1f1;
+      border-radius: 15px; }
+    .ant-breadcrumb .add-api:hover {
+      transform: scale(1.2, 1.2);
+      color: #666; }
+      .ant-breadcrumb .add-api:hover .add-api-btn {
+        display: inline-block; }
+
+.ant-select-selection {
+  border: 2px solid #ddd !important;
+  box-shadow: none !important;
+  border-radius: 15px !important; }
+
+.ant-select-selection:hover {
+  border: 2px solid #ddd !important;
+  box-shadow: none !important; }
