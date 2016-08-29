@@ -40,6 +40,9 @@ html {
     clear: both;
     content: ""; }
 
+.hide {
+  display: none; }
+
 .absoLayout {
   position: absolute;
   top: 0;
@@ -181,60 +184,74 @@ html {
   .apis-tool i:hover {
     transform: scale(1.2); }
 
-.schema h2 {
-  margin-top: 20px; }
-
-.schema .content {
-  margin-left: 10px; }
-  .schema .content h3 {
-    font-size: 16px;
-    margin: 20px 0 10px 0; }
-  .schema .content p {
-    font-size: 12px;
-    margin: 3px 0; }
-  .schema .content input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-transition: border-color 0.1s ease-in;
-    transition: border-color 0.1s ease-in;
-    margin: 5px 0 5px 10px;
-    width: 200px;
-    padding: 5px 10px;
-    background: none;
-    box-shadow: none;
-    border-radius: 15px;
-    border: 2px solid #ddd;
-    outline: none; }
-  .schema .content button {
-    display: inline-block;
-    border: 1px solid #d8d8d8;
-    height: 25px;
-    width: 25px;
-    line-height: 25px;
-    text-align: center;
-    border-radius: 50%;
-    transition: all 0.2s;
-    cursor: pointer;
-    background: #d8d8d8;
-    position: relative;
-    opacity: 0;
-    outline: none;
+.schema {
+  border-bottom: 1px solid #bdbdbd;
+  padding-bottom: 10px; }
+  .schema h2 {
+    margin-top: 20px; }
+  .schema .content {
     margin-left: 10px; }
-    .schema .content button span {
-      position: absolute;
-      width: 106px;
-      top: 29px;
-      left: 0;
+    .schema .content h3 {
+      font-size: 16px;
+      margin: 20px 0 10px 0; }
+    .schema .content p {
       font-size: 12px;
-      /* display: none; */
-      background-color: #666;
-      color: #f1f1f1;
-      border-radius: 15px; }
-  .schema .content .schema-input:hover button {
-    opacity: 1;
-    transform: scale(1.2, 1.2);
-    color: #666; }
+      margin: 3px 0; }
+    .schema .content input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      -webkit-transition: border-color 0.1s ease-in;
+      transition: border-color 0.1s ease-in;
+      margin: 5px 0 5px 10px;
+      width: 200px;
+      padding: 5px 10px;
+      background: none;
+      box-shadow: none;
+      border-radius: 15px;
+      border: 2px solid #ddd;
+      outline: none; }
+    .schema .content button {
+      display: inline-block;
+      border: 1px solid #d8d8d8;
+      height: 25px;
+      width: 25px;
+      line-height: 25px;
+      text-align: center;
+      border-radius: 50%;
+      transition: all 0.2s;
+      cursor: pointer;
+      background: #d8d8d8;
+      position: relative;
+      outline: none;
+      margin-left: 10px; }
+      .schema .content button span {
+        position: absolute;
+        width: 106px;
+        top: 29px;
+        left: 0;
+        font-size: 12px;
+        /* display: none; */
+        background-color: #666;
+        color: #f1f1f1;
+        border-radius: 15px; }
+    .schema .content .schema-input .remove-schema {
+      opacity: 0; }
+    .schema .content .schema-input:hover .remove-schema {
+      opacity: 1;
+      transform: scale(1.2, 1.2);
+      color: #666; }
+    .schema .content .add-schema {
+      width: 30px;
+      height: 30px;
+      margin-top: 10px; }
+      .schema .content .add-schema span {
+        opacity: 0;
+        top: 38px;
+        left: 10px; }
+      .schema .content .add-schema:hover span {
+        opacity: 1;
+        transform: scale(1.2, 1.2); }
 
 .ant-breadcrumb {
   height: 50px;

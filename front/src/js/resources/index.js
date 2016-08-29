@@ -22,6 +22,7 @@ export default class Resources extends Component {
                             <Breadcrumb.Item className="add-api" href="#/apis"><i className="icon iconfont">&#xe657;</i><span className="add-api-btn">Go Back</span></Breadcrumb.Item>
                         </Breadcrumb>
                         <Form />
+                        <Link to="apis" className="fr go-forword"><i className="icon iconfont">&#xe656;</i></Link>
                     </Col>
                 </Row>
                 

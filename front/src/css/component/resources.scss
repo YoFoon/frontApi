@@ -1,4 +1,6 @@
 .schema{
+    border-bottom: 1px solid #bdbdbd;
+    padding-bottom: 10px;
     h2{
         margin-top: 20px;
     }
@@ -39,7 +41,6 @@
             cursor: pointer;
             background: #d8d8d8;
             position: relative;
-            opacity: 0;
             outline: none;
             margin-left: 10px;
             i{
@@ -58,11 +59,30 @@
             }
         }
         .schema-input{
+            .remove-schema{
+                opacity: 0;
+            }
             &:hover{
-                button{
+                .remove-schema{
                     opacity: 1;
                     transform: scale(1.2, 1.2);
                     color: #666;
+                }
+            }
+        }
+        .add-schema{
+            width: 30px;
+            height: 30px;
+            margin-top: 10px;
+            span{
+                opacity: 0;
+                top: 38px;
+                left:10px;
+            }
+            &:hover{
+                span{
+                    opacity: 1;
+                    transform: scale(1.2, 1.2);
                 }
             }
         }

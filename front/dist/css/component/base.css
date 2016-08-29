@@ -39,6 +39,9 @@ html {
     clear: both;
     content: ""; }
 
+.hide {
+  display: none; }
+
 .absoLayout {
   position: absolute;
   top: 0;

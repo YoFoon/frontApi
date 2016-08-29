@@ -34,6 +34,8 @@
   },
   "dependencies": {
     "antd": "^1.6.4",
+    "flux": "^2.1.1",
+    "object-assign": "^4.1.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-router": "^2.5.2",
