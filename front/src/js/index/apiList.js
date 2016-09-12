@@ -5,23 +5,32 @@ import EachList from './eachList';
 
 export default class ApiList extends Component{
 
-    // componentDidMount() {
-	// 	request
- //            //.get("http://57b6d0697bf47f1100f15dd6.mockapi.io/blog/list/articles")
- //            .get("http://localhost:8000/blog")
- //            .end(function(err, res){
- //                res = JSON.parse(res.text);
+    constructor(props){
+        super(props);
+        this.state = {
+            list: []
+        }
+    }
 
- //                console.log(res);
+    componentDidMount() {
+        var _this = this;
+		request
+            .get("http://localhost:8000/list/YoFoon")
+            .end(function(err, res){
+                res = JSON.parse(res.text);
 
- //            });
-	// }
+                _this.state.list = res.data;
+                _this.setState({list:res.data});
+
+            });
+	}
 
     render() {
         var listArr = [];
-        for( var i = 0; i< 10; i++ ){
+        var list = this.state.list;
+        for( var i = 0, listLen = list.length; i< listLen; i++ ){
 
-            listArr.push(<EachList />);
+            listArr.push(<EachList params={list[i]} />);
 
         }
 

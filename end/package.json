@@ -19,7 +19,7 @@
     "koa-router": "^5.4.0",
     "koa-session-mongoose": "^1.0.0",
     "koa-static": "^2.0.0",
-    "mongoose": "^4.5.9"
+    "mongoose": "^4.5.10"
   },
   "devDependencies": {
     "nodemon": "^1.10.2"

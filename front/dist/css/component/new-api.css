@@ -39,4 +39,7 @@
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
-  color: #FFF; }
+  color: #FFF;
+  border: none;
+  outline: none;
+  cursor: pointer; }

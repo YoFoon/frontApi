@@ -1,16 +1,26 @@
-
-
+var test = require("./../component/test");
+var GetList = require('./../component/getList');
+var GetData = require("./../component/getData");
+var saveFront = require("./../component/saveFront");
+var CreateApi = require("./../component/createApi");
 module.exports = function(router) {
 
-	router.get("/", function() {
+	router.get("/", test);
 
-		this.body = 'Hello World';
-	})
+	router.get('/list/:username', GetList);
 
-	router.get('/blog', function *(next) {
+	//router.get('/:username', saveFront);
 
-	  	this.body = 'YoFoon';
+	router.get('/:username/:api1', GetData);
 
-	});
+	router.get('/:username/:api1/:api2', GetData);
+
+	router.get('/:username/:api1/:api2/:api3', GetData);
+
+	router.get('/:username/:api1/:api2/:api3/:api4', GetData);
+
+	router.get('/:username/:api1/:api2/:api3/:api4/:api5', GetData);
+
+	router.post('/create/api',CreateApi);
 
 }
