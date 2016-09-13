@@ -3,6 +3,7 @@ var GetList = require('./../component/getList');
 var GetData = require("./../component/getData");
 var saveFront = require("./../component/saveFront");
 var CreateApi = require("./../component/createApi");
+var CreateSchema = require("./../component/createSchema");
 module.exports = function(router) {
 
 	router.get("/", test);
@@ -23,4 +24,5 @@ module.exports = function(router) {
 
 	router.post('/create/api',CreateApi);
 
+	router.post('/create/schema',CreateSchema);
 }

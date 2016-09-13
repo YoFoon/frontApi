@@ -1,12 +1,30 @@
 import React, { Component } from 'react';
 import { Breadcrumb, Row, Col } from 'antd';
 import { Link } from 'react-router'
+import request from 'superagent';
 
+import SchemaStore from '../stores/schemaStore';
 import Header from './../component/header';
 import Form from './form';
 
 
 export default class Resources extends Component {
+
+    goForword() {
+        
+        request
+            .post(URL.createAPi)
+            .send({ apiName: _this.name, apiPrefix: _this.api })
+            .end(function(err, res){
+                if(err) {
+
+                    return false;
+                }
+
+                window.location.href="#/apis";
+            });
+            
+    }
 
     render() {
 
