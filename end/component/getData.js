@@ -1,4 +1,4 @@
-var FrontInstancd = require("./../mongo/front");
+var FrontInstance = require("./../mongo/front");
 
 var getData = function *(next) {
 
@@ -8,7 +8,7 @@ var getData = function *(next) {
     data.state = 0;    
 
     try {
-        var result = yield FrontInstancd.find({});
+        var result = yield FrontInstance.find({});
         data.state = 1;
         data.data = result;
     } catch (e) {

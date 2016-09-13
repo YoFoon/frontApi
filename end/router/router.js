@@ -1,5 +1,6 @@
 var test = require("./../component/test");
 var GetList = require('./../component/getList');
+var GetChemaList = require('./../component/getChemaList');
 var GetData = require("./../component/getData");
 var saveFront = require("./../component/saveFront");
 var CreateApi = require("./../component/createApi");
@@ -9,6 +10,8 @@ module.exports = function(router) {
 	router.get("/", test);
 
 	router.get('/list/:username', GetList);
+
+	router.get('/schema/:username', GetChemaList);
 
 	//router.get('/:username', saveFront);
 
