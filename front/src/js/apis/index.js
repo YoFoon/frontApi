@@ -2,9 +2,23 @@ import React, { Component } from 'react';
 import { Breadcrumb, Row, Col } from 'antd';
 import { Link } from 'react-router'
 
+import request from 'superagent';
+import URL from './../router/index'
+
 import Header from './../component/header';
 
 export default class Apis extends Component {
+
+    componentDidMount() {
+        var _this = this;
+
+        request
+            .get(URL.getSchamaList)
+            .end(function(err,res) {
+                res = JSON.parse(res.text);
+                console.log(res);
+            });
+    }
 
     render() {
 

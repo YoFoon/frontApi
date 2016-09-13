@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import request from 'superagent';
 
+import URL from './../router/index'
+
 import EachList from './eachList';
 
 export default class ApiList extends Component{
@@ -15,7 +17,7 @@ export default class ApiList extends Component{
     componentDidMount() {
         var _this = this;
 		request
-            .get("http://localhost:8000/list/YoFoon")
+            .get(URL.getApiList)
             .end(function(err, res){
                 res = JSON.parse(res.text);
 

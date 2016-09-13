@@ -34,6 +34,10 @@ export default class Form extends Component {
 
     }
 
+    handleChange() {
+        this.props.setSchamaName(this.refs.schemaName.value);
+    }
+
     render() {
         
         var opt = this.state.opt;
@@ -56,7 +60,7 @@ export default class Form extends Component {
                 <div className="content">
                     <h3>Resource Name</h3>
                     <p>Enter meaningful resource name, it will be used to generate RESTful API URLs. Ex: users, comments, articles.</p>
-                    <input type="text" name="resource-name" id="resource-name" />
+                    <input type="text" name="resource-name" id="resource-name" ref="schemaName" onChange={this.handleChange.bind(this)} />
                     <h3>Options</h3>
                     <p>Define Resource schema, this will be used to generate mock data.</p>
                     <div className="schema-list">
