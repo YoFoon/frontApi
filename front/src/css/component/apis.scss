@@ -19,6 +19,28 @@
         }
     }
 }
-.apis-name{
+
+.api{
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+    .api-href{
+        border: 1px solid #dbdbdb;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 15px;
+        padding-left: 20px;
+        font-size: 14px;
+        a{
+            text-decoration: underline;
+        }
+    }
+    .api-tool{
+        margin-top: 10px;
+        line-height: 30px;
+        padding-left: 20px;
+        .api-show-num{
+            color:#2db7f5;
+        }
+    }
     
 }
