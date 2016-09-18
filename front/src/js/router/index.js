@@ -5,7 +5,8 @@ var config = {
     getApiList: DEV_URL + "list/YoFoon",
     getSchamaList: DEV_URL +"schema/YoFoon",
     createAPi: DEV_URL + "create/api",
-    createSchema: DEV_URL + "create/schema"
+    createSchema: DEV_URL + "create/schema",
+    updateSchema: DEV_URL + "update/schema"
 }
 
 export default config;

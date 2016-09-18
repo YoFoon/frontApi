@@ -17,7 +17,7 @@ var createApi = function *(){
         minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
         date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) 
     }
-    console.log(JSON.stringify(this.request.body.format));
+    
     var front = new SchemaInstancd({
         userName: "YoFoon",
         time: time,

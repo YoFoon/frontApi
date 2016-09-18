@@ -20,6 +20,8 @@ export default class Api extends Component{
     }
 
     handleChange(value) {
+        var _this = this;
+        
         clearTimeout(this.timer);
         
         this.state.inputValue = value;
@@ -27,12 +29,12 @@ export default class Api extends Component{
 
         this.timer = setTimeout(function() {
 
-            return false;
             request
-                .post()
-                .ssend()
+                .post(URL.updateSchema)
+                .send({"_id":_this.props.data._id,"total":value})
                 .end(function(err, res) {
                     res= JSON.parse(res.text);
+                    console.log(res);
                 });
 
         }, 300);
@@ -41,9 +43,9 @@ export default class Api extends Component{
     render() {
 
         var data = this.props.data;
-        console.log(data);
+
         //var url = `$(URL.url)\/$(data.apiPrefix)\/$(data.schemaName)`;
-        var url = URL.url +  data.userName;
+        var url = URL.url +  data._id;
         
         if(data.apiPrefix[0] === "/") {
             url += data.apiPrefix;
@@ -64,7 +66,7 @@ export default class Api extends Component{
                 <Row className="api-tool">
                     <Col span={3}>加载条数：<span className="api-show-num">{this.state.inputValue}</span>条</Col>
                     <Col span={4}>
-                        <Slider defaultValue={10} onChange={this.handleChange.bind(this)} />
+                        <Slider defaultValue={data.total} onChange={this.handleChange.bind(this)} />
                     </Col>
                     <Col span={8} offset={8}>
                         放一些控件什么的。。。
